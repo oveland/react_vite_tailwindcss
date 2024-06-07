@@ -9,7 +9,8 @@
     "preview": "vite preview --config config/vite.config.ts --mode $APP_ENV",
     "test": "vitest run --coverage --reporter verbose",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prettier": "npx prettier . --write"
+    "prettier": "npx prettier . --write",
+    "precommit": "npm run lint && npm run prettier && npm run test"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,7 +31,8 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "jsdom": "^24.1.0",
     "postcss": "^8.4.38",
-    "prettier": "3.3.1",
+    "prettier": "^3.3.1",
+    "prettier-plugin-tailwindcss": "^0.6.1",
     "sass": "^1.77.4",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
